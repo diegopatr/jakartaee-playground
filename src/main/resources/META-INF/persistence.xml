@@ -6,6 +6,21 @@
                  https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
         version="3.0">
 
-    <persistence-unit name="jakartaee-starter" transaction-type="JTA"/>
+    <persistence-unit name="jakartaee-playground">
+        <jta-data-source>java:global/datasources/JakartaEEPlaygroundDS</jta-data-source>
+
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+            <!-- for  Glassfish/Payara/EclipseLink -->
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+
+            <!-- for WildFly/Hibernate -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
 
 </persistence>

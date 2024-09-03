@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      lang="en">
+
+<h:head>
+    <title>Jakarta EE Playground</title>
+</h:head>
+
+<h:body>
+    <h1>Jakarta EE Playground</h1>
+    <h3>${helloJakartaBean.message}</h3>
+    <h:form>
+        <h:outputLabel for="name" value="Enter your name: "/>
+        <h:inputText id="name" value="#{greetingBean.name}" required="true"/>
+        <h:commandButton value="Submit"
+                         action="#{greetingBean.sayHello}">
+            <f:ajax execute="@form" render="output"/>
+        </h:commandButton>
+    </h:form>
+    <h:panelGroup id="output">
+        <p><h:outputText id="message" value="#{greetingBean.message}"/></p>
+        <p><h:outputText id="bean" value="#{greetingBean}"/></p>
+    </h:panelGroup>
+</h:body>
+
+</html>

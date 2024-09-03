@@ -1,9 +1,12 @@
-# Jakarta EE Starter Project
+# Jakarta EE Playground
 
-This is a starter project for Jakarta EE applications using Maven. It includes basic configurations and dependencies to get you started with Jakarta EE development.
+This project serves as a practical environment to practice and implement various Jakarta EE concepts such as JPA (Java
+Persistence API), CDI (Contexts and Dependency Injection), and JSF (JavaServer Faces).
 
 ## Project Structure
 
+- `src/main/resources/META-INF/persistence.xml`: Configuration file for JPA (Java Persistence API).
+- `src/main/webapp/WEB-INF/faces-config.xml`: Configuration file for JSF (JavaServer Faces).
 - `src/main/webapp/WEB-INF/beans.xml`: Configuration file for CDI (Contexts and Dependency Injection).
 - `src/main/webapp/WEB-INF/web.xml`: Deployment descriptor for the web application.
 - `pom.xml`: Maven configuration file.
@@ -23,7 +26,8 @@ mvn clean install
 
 ## Running the Project
 
-To run the project, you can deploy the generated WAR file to a Jakarta EE compatible application server such as WildFly, Payara, or TomEE.
+To run the project, you can deploy the generated WAR file to a Jakarta EE compatible application server such as WildFly,
+Payara, or TomEE.
 
 ## Dependencies
 
@@ -38,7 +42,8 @@ To run the project, you can deploy the generated WAR file to a Jakarta EE compat
 
 ### `pom.xml`
 
-The `pom.xml` file includes the necessary dependencies and plugins for building and packaging the Jakarta EE application.
+The `pom.xml` file includes the necessary dependencies and plugins for building and packaging the Jakarta EE
+application.
 
 ### `beans.xml`
 
@@ -51,4 +56,3 @@ The `web.xml` file is the deployment descriptor for the web application.
 ## License
 
 This project is licensed under the MIT License.
-```

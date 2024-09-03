@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      lang="en">
+
+<h1>Jakarta EE Playground</h1>
+<h3>Message List</h3>
+<h:form>
+    <h:outputLabel for="message" value="Enter your message: "/>
+    <h:inputText id="message" value="#{messageBean.message.text}" required="true"/>
+    <h:commandButton value="Submit"
+                     action="#{messageBean.save}">
+        <f:ajax execute="@form" render=":table"/>
+    </h:commandButton>
+</h:form>
+<h:dataTable id="table" value="#{messageBean.messages}" var="message">
+    <h:column>
+        <h:outputText value="#{message.id}"/>
+    </h:column>
+    <h:column>
+        <h:outputText value="#{message.text}"/>
+    </h:column>
+</h:dataTable>
+</html>
