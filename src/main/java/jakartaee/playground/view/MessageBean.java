@@ -1,4 +1,4 @@
-package jakartaee.playground.controller;
+package jakartaee.playground.view;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;

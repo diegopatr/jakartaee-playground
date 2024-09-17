@@ -21,6 +21,27 @@
         <param-value>true</param-value>
     </context-param>
 
+    <mime-mapping>
+        <extension>jpg</extension>
+        <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>png</extension>
+        <mime-type>image/png</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>gif</extension>
+        <mime-type>image/gif</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>svg</extension>
+        <mime-type>image/svg+xml</mime-type>
+    </mime-mapping>
+
+
     <data-source>
         <name>java:global/datasources/JakartaEEPlaygroundDS</name>
         <class-name>org.h2.jdbcx.JdbcDataSource</class-name>
