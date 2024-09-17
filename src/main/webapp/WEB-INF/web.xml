@@ -28,6 +28,6 @@
     </data-source>
 
     <welcome-file-list>
-        <welcome-file>hello.xhtml</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -1,10 +1,11 @@
 package jakartaee.playground;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 
 @Named
-@RequestScoped
+@ApplicationScoped
 public class GreetingBean {
     private String name;
     private String message;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      lang="en">
+<f:view contentType="text/html" encoding="UTF-8">
+    <h:head>
+        <title>Jakarta EE Playground</title>
+    </h:head>
+
+    <h:body styleClass="d-flex flex-column h-100">
+        <h:panelGroup layout="block" styleClass="header">
+            <ui:include src="/WEB-INF/layout/header.xhtml"/>
+        </h:panelGroup>
+
+        <main role="main">
+            <div class="container">
+                <h3>
+                    <ui:insert name="title"/>
+                </h3>
+
+                <ui:insert name="content"/>
+            </div>
+        </main>
+
+        <ui:include src="/WEB-INF/layout/footer.xhtml"/>
+    </h:body>
+</f:view>
+</html>
